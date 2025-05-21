@@ -15,7 +15,7 @@ const MainFeature = ({ onAddStudent }) => {
     email: '',
     contactNumber: '',
     course: '',
-    status: 'Pending'
+    status: ''
   };
 
   const [formData, setFormData] = useState(initialFormState);
