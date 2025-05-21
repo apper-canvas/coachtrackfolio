@@ -10,14 +10,15 @@ export default {
         primary: {
           DEFAULT: '#4361ee',
           light: '#738af4',
-          dark: '#2a3eb1'
+          dark: '#2a3eb1',
+          ultralight: '#eef1fd'
         },
         secondary: {
           DEFAULT: '#ff7c43',
           light: '#ff9b6a',
           dark: '#e55a1f'
         },
-        accent: '#12b5b0',
+        accent: '#4cc9f0',
         surface: {
           50: '#f8fafc',   // Lightest
           100: '#f1f5f9',
@@ -39,7 +40,8 @@ export default {
         'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
         'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)',
         'neu-light': '5px 5px 15px #d1d9e6, -5px -5px 15px #ffffff',
-        'neu-dark': '5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.05)'
+        'neu-dark': '5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.05)',
+        'glass': '0 8px 32px rgba(0, 0, 0, 0.1)'
       },
       borderRadius: {
         'xl': '0.75rem',

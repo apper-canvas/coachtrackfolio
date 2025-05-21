@@ -241,30 +241,26 @@ const MainFeature = ({ onAddStudent }) => {
         {/* Status Selection Field */}
         <div>
           <label className="block text-sm font-medium text-surface-700 dark:text-surface-300 mb-1">
-            Enrollment Status
+            Status
           </label>
-          <div className="grid grid-cols-3 gap-2">
-            {['Enrolled', 'Pending', 'Cancelled'].map((status) => (
-              <label
-                key={status}
-                className={`
-                  flex items-center justify-center p-2 border rounded-lg cursor-pointer transition-all
-                  ${formData.status === status 
-                    ? 'border-primary bg-primary bg-opacity-10 text-primary dark:border-primary-light dark:text-primary-light'
-                    : 'border-surface-300 dark:border-surface-700 hover:bg-surface-50 dark:hover:bg-surface-800'}
-                `}
-              >
-                <input
-                  type="radio"
-                  name="status"
-                  value={status}
-                  checked={formData.status === status}
-                  onChange={handleChange}
-                  className="sr-only"
-                />
-                <span className="text-sm font-medium">{status}</span>
-              </label>
-            ))}
+          <div className="relative">
+            <select
+              id="status"
+              name="status"
+              value={formData.status}
+              onChange={handleChange}
+              className={`select-field ${errors.status ? 'border-red-500 focus:ring-red-500' : ''}`}
+            >
+              <option value="" disabled>Select a status</option>
+              <option value="Enrolled">Enrolled</option>
+              <option value="Pending">Pending</option>
+              <option value="Cancelled">Cancelled</option>
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-surface-700 dark:text-surface-300">
+              <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+              </svg>
+            </div>
           </div>
           <AnimatePresence>
             {errors.status && (

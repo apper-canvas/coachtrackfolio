@@ -9,7 +9,14 @@
   }
   
   body {
-    @apply bg-surface-50 dark:bg-surface-900 text-surface-800 dark:text-surface-100 font-sans;
+    @apply text-surface-800 dark:text-surface-100 font-sans;
+    background-color: #f8fafc;
+    background-image: radial-gradient(#4361ee11 1px, transparent 1px), 
+                      radial-gradient(#4361ee08 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    background-attachment: fixed;
+    transition: background-color 0.3s ease-in-out;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -26,6 +33,13 @@
   
   h3 {
     @apply text-xl md:text-2xl;
+  }
+  
+  /* Dark mode background */
+  .dark body {
+    background-color: #0f172a;
+    background-image: radial-gradient(#4361ee08 1px, transparent 1px),
+                      radial-gradient(#4361ee05 1px, transparent 1px);
   }
 }
 
@@ -58,6 +72,7 @@
   }
   
   .select-field {
+    cursor: pointer;
     @apply w-full px-4 py-3 rounded-lg border border-surface-300 dark:border-surface-700 bg-white dark:bg-surface-800 
     focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-light focus:border-transparent
     transition duration-200 appearance-none bg-no-repeat bg-[length:1rem_1rem] bg-[right_1rem_center];
